@@ -29,7 +29,7 @@ const config = {
     }
   },
   boost: {
-    enabled: true, // note: series / boostThreshold needs to be > 0 for this & useGPUTranslations to work
+    enabled: false, 
     useGPUTranslations: false, // doesn't work with addPoint and timeseries x axes
     seriesThreshold: 1,
     allowForce: true,
@@ -67,7 +67,7 @@ class MyHighchartsChart extends React.Component {
           //self.chart.series[0].addPoint(point, false, self.chart.series[0].data.length>data.get('sensor1').n, false)
 
           // comment out the next line and comment in the 2 previous to use addPoint. Note, addPoint doesn't work with boost module, so disable that above.
-          self.chart/*.update({series: [{data: temp}]})*/.series[0].setData(temp, false, false, false) 
+          self.chart/*.update({series: [{data: temp}]})*/.series[0].setData(temp, false, true, false) 
           self.chart.redraw();
         
       }
