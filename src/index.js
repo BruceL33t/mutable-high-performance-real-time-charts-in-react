@@ -5,7 +5,7 @@ import { types } from 'mobx-state-tree';
 import { Provider, observer, inject } from 'mobx-react';
 // import { connectReduxDevtools } from 'mst-middlewares'
 import registerServiceWorker from './registerServiceWorker';
-import MyHighchartsChart from './MyHighchartsChart';
+import MyChartJsChart from './MyChartJsChart';
 import Sensor from './models/Sensor';
 
 const RootStore = types.model({
@@ -75,7 +75,7 @@ class App extends React.Component {
     return false;
   }
   render(){
-    return <MyHighchartsChart/>
+    return <MyChartJsChart/>
   }
 }
 
